@@ -165,6 +165,7 @@ vector<string> opencode(string x) {
 	string s;
 	for(char i:x)
 		if(i==' '&&s!="") ret.push_back(s),s="";
+		else if(i=='#') break;
 		else s=s+i;
 	if(s!="")ret.push_back(s);
 	return ret;
